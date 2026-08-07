@@ -1,0 +1,126 @@
+# Site-wide settings, navigation, and the theme catalogue.
+# Order of [[theme]] blocks is the order they appear in listings.
+
+[site]
+name        = "WiThemes"
+tagline     = "Since 2013."
+base        = "https://withemes.github.io"
+description = "WiThemes is a WordPress theme studio. We build modern, clean and stable WordPress themes."
+email       = "info@withemes.com"
+docs        = "https://themedocs.github.io"
+support     = "https://withemes.ticksy.com/"
+
+[[nav]]
+title = "Themes"
+url   = "/themes/"
+
+[[nav]]
+title = "About"
+url   = "/about/"
+
+[[nav]]
+title = "Help"
+url   = "/help/"
+
+[[footer]]
+title = "Docs"
+url   = "https://themedocs.github.io"
+
+[[footer]]
+title = "Help"
+url   = "/help/"
+
+[[footer]]
+title = "Contact"
+url   = "/contact/"
+
+[[footer]]
+title = "Privacy"
+url   = "/privacy/"
+
+[[footer]]
+title = "Terms"
+url   = "/terms/"
+
+[[footer]]
+title = "Instagram"
+url   = "https://www.instagram.com/withemesco"
+
+[[footer]]
+title = "Facebook"
+url   = "https://www.facebook.com/withemes"
+
+# ---------------------------------------------------------------- themes
+
+[[theme]]
+slug    = "stoat"
+name    = "Stoat"
+tagline = "A tiny, fast theme for blogs and personal sites."
+group   = "free"
+price   = "Free"
+image   = "stoat.jpg"
+demo    = "https://stoat.themepreview.site/"
+get     = "https://wordpress.org/themes/stoat/"
+get_label = "Download"
+docs    = "https://themedocs.github.io/stoat/"
+support = "https://wordpress.org/support/theme/stoat/"
+
+[[theme]]
+slug    = "fox"
+name    = "Fox"
+tagline = "Contemporary magazine theme for creators."
+group   = "themeforest"
+price   = "ThemeForest"
+image   = "fox.jpg"
+demo    = "https://fox.themepreview.site/"
+get     = "https://themeforest.net/item/the-fox-contemporary-magazine-theme-for-creators/11103012"
+get_label = "Buy"
+docs    = "https://themedocs.github.io/fox/"
+support = "https://withemes.ticksy.com/"
+
+[[theme]]
+slug    = "dine"
+name    = "Dine"
+tagline = "An elegant theme for restaurants and cafés."
+group   = "themeforest"
+price   = "ThemeForest"
+image   = "dine.jpg"
+demo    = "https://dine.themepreview.site/"
+get     = "https://themeforest.net/item/dine-elegant-restaurant-theme/19489643"
+get_label = "Buy"
+docs    = "https://themedocs.github.io/dine/"
+support = "https://withemes.ticksy.com/"
+
+[[theme]]
+slug    = "simple-elegant"
+name    = "Simple & Elegant"
+tagline = "A clean multipurpose theme for any kind of site."
+group   = "themeforest"
+price   = "ThemeForest"
+image   = "simple-elegant.jpg"
+demo    = "https://simple-elegant.themepreview.site/"
+get     = "https://themeforest.net/item/simple-elegant-multipurpose-theme/13730411"
+get_label = "Buy"
+docs    = "https://themedocs.github.io/simple-elegant/"
+support = "https://withemes.ticksy.com/"
+
+[[theme]]
+slug    = "blank"
+name    = "Blank"
+tagline = "A minimalist blog theme — our first, from 2013."
+group   = "themeforest"
+price   = "ThemeForest"
+image   = "blank.jpg"
+demo    = "https://blank.themepreview.site/"
+get     = "https://themeforest.net/item/blank-elegant-and-minimalist-wordpress-blog/5134048"
+get_label = "Buy"
+docs    = "https://themedocs.github.io/blank/"
+support = "https://withemes.ticksy.com/"
+
+[group.free]
+title = "From withemes.com"
+note  = "Free themes, distributed through the WordPress.org theme directory."
+
+[group.themeforest]
+title = "On ThemeForest"
+note  = "Premium themes we still sell and maintain on ThemeForest."
