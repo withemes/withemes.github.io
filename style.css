@@ -69,3 +69,5 @@ footer {
   font-size: .9rem;
   color: var(--muted);
 }
+
+footer p { margin: 0 0 .25rem; }
