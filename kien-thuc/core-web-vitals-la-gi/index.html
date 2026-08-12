@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Core Web Vitals là gì? LCP, INP, CLS và ngưỡng đạt | WiThemes</title>
+<meta name="description" content="Giải thích Core Web Vitals: LCP, INP, CLS là gì, ngưỡng nào được coi là đạt, nguyên nhân thường gặp và cách sửa từng chỉ số khi bị đỏ.">
+<link rel="canonical" href="https://withemes.com/kien-thuc/core-web-vitals-la-gi/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="WiThemes">
+<meta property="og:title" content="Core Web Vitals là gì? LCP, INP, CLS và ngưỡng đạt | WiThemes">
+<meta property="og:description" content="Giải thích Core Web Vitals: LCP, INP, CLS là gì, ngưỡng nào được coi là đạt, nguyên nhân thường gặp và cách sửa từng chỉ số khi bị đỏ.">
+<meta property="og:url" content="https://withemes.com/kien-thuc/core-web-vitals-la-gi/">
+<meta property="og:image" content="https://withemes.com/assets/site-restaurant.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="stylesheet" href="/style-3.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://withemes.com/"}, {"@type": "ListItem", "position": 2, "name": "Kiến thức", "item": "https://withemes.com/kien-thuc/"}, {"@type": "ListItem", "position": 3, "name": "Core Web Vitals là gì?", "item": "https://withemes.com/kien-thuc/core-web-vitals-la-gi/"}]}, {"@type": "Article", "headline": "Core Web Vitals là gì?", "description": "Giải thích LCP, INP, CLS, ngưỡng đạt và cách khắc phục từng chỉ số.", "datePublished": "2026-08-12", "dateModified": "2026-08-12", "inLanguage": "vi", "author": {"@type": "Organization", "name": "WiThemes"}, "publisher": {"@type": "Organization", "name": "WiThemes", "logo": {"@type": "ImageObject", "url": "https://withemes.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://withemes.com/kien-thuc/core-web-vitals-la-gi/"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Core Web Vitals ảnh hưởng thứ hạng bao nhiêu?", "acceptedAnswer": {"@type": "Answer", "text": "Nó là một yếu tố xếp hạng nhưng không phải yếu tố lớn. Giá trị thật nằm ở chỗ trang nhanh giữ được khách: tỷ lệ thoát giảm và tỷ lệ chuyển đổi tăng."}}, {"@type": "Question", "name": "Điểm PageSpeed 100 có cần thiết không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Đạt ngưỡng xanh cho cả ba chỉ số là đủ. Chạy theo 100 điểm thường phải hy sinh tính năng hoặc hình ảnh, không đáng."}}, {"@type": "Question", "name": "Dữ liệu phòng thí nghiệm khác dữ liệu thực tế thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "PageSpeed Insights mô phỏng một thiết bị và một đường truyền cố định. Báo cáo trải nghiệm người dùng thật gom số liệu từ khách của bạn trong 28 ngày — đó mới là cái Google dùng."}}]}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5EDRYVRH1M"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5EDRYVRH1M');
+</script>
+</head>
+<body id="top">
+<div class="topbar"><div class="wrap">
+  <span>Email: <a href="mailto:info@withemes.com">info@withemes.com</a></span>
+  <span>Hotline: <a href="tel:0900000000">0900 000 000</a></span>
+  <span class="right blink">⚡ ĐANG NHẬN DỰ ÁN THÁNG NÀY – GIẢM 20%</span>
+</div></div>
+<header class="head"><div class="wrap">
+  <a class="logo" href="/"><b>Wi</b><span>Themes</span>
+    <small>Thiết kế website · SEO</small></a>
+  <div class="hot">
+    <small>Tư vấn miễn phí</small>
+    <div class="num"><a href="tel:0900000000" style="color:inherit">0900 000 000</a></div>
+  </div>
+  <a class="btn btn-g" href="/lien-he/">Nhận báo giá</a>
+</div></header>
+<nav class="main"><div class="wrap"><ul><li><a href="/">Trang chủ</a></li><li><a href="/gioi-thieu/">Giới thiệu</a></li><li class="drop"><a href="/dich-vu/">Dịch vụ ▾</a><ul><li><a href="/dich-vu/thiet-ke-website/">Thiết kế website chuẩn SEO</a></li><li><a href="/dich-vu/thiet-ke-website-ban-hang/">Thiết kế website bán hàng</a></li><li><a href="/dich-vu/thiet-ke-landing-page/">Thiết kế landing page</a></li><li><a href="/dich-vu/dich-vu-seo-tong-the/">Dịch vụ SEO tổng thể</a></li><li><a href="/dich-vu/seo-tu-khoa/">Dịch vụ SEO từ khóa</a></li><li><a href="/dich-vu/seo-local-google-maps/">SEO Local – Google Maps</a></li><li><a href="/dich-vu/audit-website/">Audit website</a></li><li><a href="/dich-vu/toi-uu-toc-do-website/">Tối ưu tốc độ website</a></li></ul></li><li><a href="/bang-gia/">Bảng giá</a></li><li><a href="/quy-trinh/">Quy trình</a></li><li><a href="/du-an/">Dự án</a></li><li><a href="/kien-thuc/">Kiến thức</a></li><li><a href="/lien-he/">Liên hệ</a></li></ul></div></nav>
+<div class="ticker"><span>★ KHUYẾN MÃI THÁNG NÀY: TẶNG TRỌN GÓI HOSTING 1 NĂM + TÊN MIỀN .COM CHO MỌI HỢP ĐỒNG THIẾT KẾ WEBSITE ★ TẶNG AUDIT SEO 27 ĐIỂM TRỊ GIÁ 2.000.000đ ★ GỌI NGAY 0900 000 000 ★</span></div>
+<div class="pagehead"><div class="wrap"><h1>Core Web Vitals là gì?</h1><div class="crumb"><a href="/">Trang chủ</a> › <span>Kiến thức</span> › <span>Core Web Vitals là gì?</span></div></div></div><div class="main"><div class="wrap"><div class="cols"><div class="content">
+<p class="postmeta">Cập nhật 12/08/2026 · khoảng 7 phút đọc</p>
+
+<p><strong>Core Web Vitals</strong> là bộ ba chỉ số Google dùng để đo trải nghiệm thực tế của
+người dùng trên một trang web: nội dung hiện ra nhanh không, bấm có phản hồi ngay không,
+và bố cục có nhảy lung tung khi đang đọc không.</p>
+
+<h2>Ba chỉ số và ngưỡng đạt</h2>
+<table>
+<thead><tr><th>Chỉ số</th><th>Đo cái gì</th><th>Tốt</th><th>Cần cải thiện</th><th>Kém</th></tr></thead>
+<tbody>
+<tr><td><strong>LCP</strong><br>Largest Contentful Paint</td>
+    <td>Thời điểm phần tử nội dung lớn nhất hiện ra</td>
+    <td>≤ 2,5 giây</td><td>2,5 – 4 giây</td><td>&gt; 4 giây</td></tr>
+<tr><td><strong>INP</strong><br>Interaction to Next Paint</td>
+    <td>Độ trễ từ khi người dùng bấm tới khi màn hình phản hồi</td>
+    <td>≤ 200 ms</td><td>200 – 500 ms</td><td>&gt; 500 ms</td></tr>
+<tr><td><strong>CLS</strong><br>Cumulative Layout Shift</td>
+    <td>Mức độ bố cục xê dịch ngoài ý muốn</td>
+    <td>≤ 0,1</td><td>0,1 – 0,25</td><td>&gt; 0,25</td></tr>
+</tbody>
+</table>
+<p>Một trang được coi là đạt khi <strong>cả ba</strong> chỉ số nằm trong ngưỡng tốt ở phân vị
+thứ 75 của người dùng thật — nghĩa là 3 trên 4 lượt truy cập phải đạt.</p>
+
+<h2>LCP kém: nguyên nhân và cách sửa</h2>
+<ul>
+  <li><strong>Ảnh banner quá nặng.</strong> Nén xuống dưới 200KB, dùng WebP, và không đặt
+  loading="lazy" cho ảnh nằm ngay màn hình đầu.</li>
+  <li><strong>Máy chủ phản hồi chậm.</strong> Nếu thời gian phản hồi đầu tiên trên 600ms,
+  vấn đề nằm ở hosting hoặc thiếu cache, không phải ở giao diện.</li>
+  <li><strong>Phông chữ chặn hiển thị.</strong> Dùng font-display: swap và nạp trước phông chính.</li>
+  <li><strong>CSS hoặc JS chặn kết xuất.</strong> Tách phần CSS cần cho màn hình đầu, hoãn phần
+  còn lại.</li>
+</ul>
+
+<h2>INP kém: nguyên nhân và cách sửa</h2>
+<ul>
+  <li><strong>JavaScript làm việc quá lâu trên luồng chính.</strong> Chia nhỏ tác vụ, hoãn những
+  gì không cần ngay khi tải.</li>
+  <li><strong>Quá nhiều mã theo dõi.</strong> Mỗi pixel quảng cáo là một khoản nợ hiệu năng;
+  gỡ những cái không ai còn xem báo cáo.</li>
+  <li><strong>Giao diện nặng.</strong> Bảng dữ liệu hàng nghìn dòng, hiệu ứng trượt phức tạp,
+  bộ lọc chạy phía trình duyệt — cân nhắc phân trang hoặc xử lý phía máy chủ.</li>
+</ul>
+
+<h2>CLS kém: nguyên nhân và cách sửa</h2>
+<ul>
+  <li><strong>Ảnh không khai báo kích thước.</strong> Luôn đặt thuộc tính width và height.</li>
+  <li><strong>Quảng cáo hoặc banner chèn động.</strong> Dành sẵn chỗ trống đúng kích thước.</li>
+  <li><strong>Phông chữ thay đổi làm chữ nhảy.</strong> Chọn phông dự phòng có kích thước gần
+  giống phông chính.</li>
+  <li><strong>Thông báo cookie đẩy nội dung xuống.</strong> Cho nó nổi lên trên thay vì chèn vào
+  dòng chảy trang.</li>
+</ul>
+
+<h2>Đo ở đâu</h2>
+<ol>
+  <li><strong>Google Search Console</strong> – mục Core Web Vitals, dữ liệu người dùng thật,
+  gom theo nhóm URL. Đây là nguồn đáng tin nhất.</li>
+  <li><strong>PageSpeed Insights</strong> – đo nhanh một URL, có cả dữ liệu thật lẫn mô phỏng.</li>
+  <li><strong>Chrome DevTools</strong> – tab Performance, để tìm chính xác đoạn mã nào gây chậm.</li>
+</ol>
+
+<blockquote>Đo trên máy tính của bạn với mạng cáp quang rồi kết luận "website nhanh mà" là sai lầm
+phổ biến nhất. Hãy xem số liệu người dùng thật, phần lớn họ đang dùng 4G trên điện thoại tầm
+trung.</blockquote>
+
+<h2>Đáng đầu tư tới đâu?</h2>
+<p>Đưa cả ba chỉ số về ngưỡng xanh là mục tiêu hợp lý. Vượt qua mốc đó, mỗi phần trăm cải thiện
+thêm tốn công gấp bội mà thu về rất ít. Nếu website của bạn đang đỏ,
+<a href="/dich-vu/toi-uu-toc-do-website/">dịch vụ tối ưu tốc độ</a> xử lý đúng danh sách trên
+với cam kết ngưỡng đạt.</p>
+<h2>Câu hỏi thường gặp</h2>
+<details><summary>Core Web Vitals ảnh hưởng thứ hạng bao nhiêu?</summary><div class="a">Nó là một yếu tố xếp hạng nhưng không phải yếu tố lớn. Giá trị thật nằm ở chỗ trang nhanh giữ được khách: tỷ lệ thoát giảm và tỷ lệ chuyển đổi tăng.</div></details>
+<details><summary>Điểm PageSpeed 100 có cần thiết không?</summary><div class="a">Không. Đạt ngưỡng xanh cho cả ba chỉ số là đủ. Chạy theo 100 điểm thường phải hy sinh tính năng hoặc hình ảnh, không đáng.</div></details>
+<details><summary>Dữ liệu phòng thí nghiệm khác dữ liệu thực tế thế nào?</summary><div class="a">PageSpeed Insights mô phỏng một thiết bị và một đường truyền cố định. Báo cáo trải nghiệm người dùng thật gom số liệu từ khách của bạn trong 28 ngày — đó mới là cái Google dùng.</div></details>
+<p>Đọc tiếp: <a href="/kien-thuc/checklist-seo-onpage/">Checklist SEO onpage 27 điểm</a> ·
+<a href="/kien-thuc/seo-la-gi/">SEO là gì</a></p>
+</div><aside class="side">
+  <div class="widget"><h3>Dịch vụ của chúng tôi</h3><ul><li><a href="/dich-vu/thiet-ke-website/">Thiết kế website chuẩn SEO</a></li><li><a href="/dich-vu/thiet-ke-website-ban-hang/">Thiết kế website bán hàng</a></li><li><a href="/dich-vu/thiet-ke-landing-page/">Thiết kế landing page</a></li><li><a href="/dich-vu/dich-vu-seo-tong-the/">Dịch vụ SEO tổng thể</a></li><li><a href="/dich-vu/seo-tu-khoa/">Dịch vụ SEO từ khóa</a></li><li><a href="/dich-vu/seo-local-google-maps/">SEO Local – Google Maps</a></li><li><a href="/dich-vu/audit-website/">Audit website</a></li><li><a href="/dich-vu/toi-uu-toc-do-website/">Tối ưu tốc độ website</a></li></ul></div>
+  <div class="widget"><div class="callbox">
+    <span>TƯ VẤN MIỄN PHÍ 24/7</span>
+    <b><a href="tel:0900000000">0900 000 000</a></b>
+    <a class="btn btn-g btn-sm" href="/lien-he/">GỬI YÊU CẦU</a>
+  </div></div>
+  <div class="widget"><h3>Cam kết</h3><div class="inner">
+    <ul style="list-style:none;padding:0;margin:0;font-size:13px">
+      <li>✔ Báo giá trọn gói, không phát sinh</li>
+      <li>✔ Website chuẩn SEO, chuẩn mobile</li>
+      <li>✔ Tốc độ tải dưới 3 giây</li>
+      <li>✔ Bàn giao toàn bộ mã nguồn</li>
+      <li>✔ Bảo hành 12 tháng</li>
+    </ul>
+  </div></div>
+  <div class="widget"><h3>Kiến thức mới</h3><ul><li><a href="/kien-thuc/seo-la-gi/">SEO là gì? Hiểu đúng trước khi tiêu tiền</a></li><li><a href="/kien-thuc/checklist-seo-onpage/">Checklist SEO onpage 27 điểm</a></li><li><a href="/kien-thuc/core-web-vitals-la-gi/">Core Web Vitals là gì?</a></li></ul></div>
+  <div class="widget"><div class="zalo">Chat Zalo: <a href="#">0900 000 000</a></div></div>
+</aside></div></div></div>
+<footer class="site"><div class="wrap">
+<div class="cols4">
+  <div>
+    <h4>WiThemes</h4>
+    <p>Công ty thiết kế website và SEO tại TP. Hồ Chí Minh. Thành lập 7/2024.</p>
+    <p>Địa chỉ: Tầng trệt, 114 Điện Biên Phủ, Phường Tân Định, Thành phố Hồ Chí Minh</p>
+    <p>Email: <a href="mailto:info@withemes.com">info@withemes.com</a><br>Hotline: <a href="tel:0900000000">0900 000 000</a></p>
+    <p class="social"><a href="#">Facebook</a><a href="#">Zalo</a><a href="#">YouTube</a><a href="#">LinkedIn</a><a href="#">TikTok</a></p>
+  </div>
+  <div><h4>Dịch vụ</h4><ul><li><a href="/dich-vu/thiet-ke-website/">Thiết kế website chuẩn SEO</a></li><li><a href="/dich-vu/thiet-ke-website-ban-hang/">Thiết kế website bán hàng</a></li><li><a href="/dich-vu/thiet-ke-landing-page/">Thiết kế landing page</a></li><li><a href="/dich-vu/dich-vu-seo-tong-the/">Dịch vụ SEO tổng thể</a></li><li><a href="/dich-vu/seo-tu-khoa/">Dịch vụ SEO từ khóa</a></li><li><a href="/dich-vu/seo-local-google-maps/">SEO Local – Google Maps</a></li><li><a href="/dich-vu/audit-website/">Audit website</a></li><li><a href="/dich-vu/toi-uu-toc-do-website/">Tối ưu tốc độ website</a></li></ul></div>
+  <div><h4>Thông tin</h4><ul>
+    <li><a href="/gioi-thieu/">Giới thiệu</a></li>
+    <li><a href="/bang-gia/">Bảng giá</a></li>
+    <li><a href="/quy-trinh/">Quy trình làm việc</a></li>
+    <li><a href="/du-an/">Dự án đã thực hiện</a></li>
+    <li><a href="/cau-hoi-thuong-gap/">Câu hỏi thường gặp</a></li>
+    <li><a href="/kien-thuc/">Kiến thức SEO</a></li>
+    <li><a href="/lien-he/">Liên hệ</a></li>
+  </ul></div>
+  <div><h4>Chính sách</h4><ul>
+    <li><a href="/dieu-khoan/">Điều khoản sử dụng</a></li>
+    <li><a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a></li>
+    <li><a href="/sitemap.xml">Sitemap</a></li>
+  </ul>
+  <h4 style="margin-top:16px">Khu vực</h4>
+  <p style="font-size:12px">TP. Hồ Chí Minh · Hà Nội · Đà Nẵng · Bình Dương · Cần Thơ</p>
+  </div>
+</div>
+<div class="bottom">
+  <div>&copy; 2024–2026 WiThemes. MST: 0318552411.</div>
+  <div class="r">Thiết kế website &amp; SEO – WiThemes</div>
+</div>
+</div></footer>
+<div class="float">
+  <a class="f1 blink" href="tel:0900000000" title="Gọi hotline">GỌI</a>
+  <a class="f2" href="#" title="Chat Zalo">ZALO</a>
+  <a class="f3" href="/lien-he/" title="Gửi yêu cầu">FORM</a>
+</div>
+<a class="totop" href="#top" title="Lên đầu trang">▲</a>
+</body>
+</html>

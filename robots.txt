@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://withemes.github.io/sitemap.xml
+Sitemap: https://withemes.com/sitemap.xml

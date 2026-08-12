@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://withemes.github.io/</loc><priority>1.0</priority></url>
-  <url><loc>https://withemes.github.io/projects/</loc><priority>0.6</priority></url>
-  <url><loc>https://withemes.github.io/about/</loc><priority>0.6</priority></url>
-  <url><loc>https://withemes.github.io/contact/</loc><priority>0.6</priority></url>
-  <url><loc>https://withemes.github.io/terms/</loc><priority>0.3</priority></url>
-  <url><loc>https://withemes.github.io/privacy/</loc><priority>0.3</priority></url>
+  <url><loc>https://withemes.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://withemes.com/gioi-thieu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/dich-vu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/dich-vu/thiet-ke-website/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/thiet-ke-website-ban-hang/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/thiet-ke-landing-page/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/dich-vu-seo-tong-the/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/seo-tu-khoa/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/seo-local-google-maps/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/audit-website/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/dich-vu/toi-uu-toc-do-website/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/bang-gia/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/quy-trinh/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/du-an/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/cau-hoi-thuong-gap/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/kien-thuc/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/kien-thuc/seo-la-gi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/kien-thuc/checklist-seo-onpage/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/kien-thuc/core-web-vitals-la-gi/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://withemes.com/lien-he/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/dieu-khoan/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://withemes.com/chinh-sach-bao-mat/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
